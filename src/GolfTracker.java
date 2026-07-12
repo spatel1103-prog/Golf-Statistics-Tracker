@@ -12,7 +12,6 @@ public class GolfTracker {
     public void addRound ( GolfRound round ) {
 
         rounds.add(round);
-        System.out.println("Round added successfully.");
 
     }
 
@@ -156,7 +155,7 @@ public class GolfTracker {
 
         rounds.remove(index-1);
 
-        System.out.println("Round deleted successfully.");
+        System.out.println("Round deleted successfully.\n");
     }
 
 
