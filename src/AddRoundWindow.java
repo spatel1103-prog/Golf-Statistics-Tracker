@@ -1,5 +1,5 @@
 import javax.swing.*;
-
+import java.io.FileNotFoundException;
 public class AddRoundWindow {
 
     protected JPanel mainPanel;
@@ -74,6 +74,16 @@ public class AddRoundWindow {
                 );
 
                 tracker.addRound(round);
+
+                try {
+                    FileManager.saveRounds(tracker);
+                } catch (FileNotFoundException ex) {
+                    JOptionPane.showMessageDialog(
+                            mainPanel,
+                            "Error saving rounds."
+                    );
+                    return;
+                }
 
                 JOptionPane.showMessageDialog(
                         mainPanel,

@@ -1,5 +1,5 @@
 import javax.swing.*;
-
+import java.io.FileNotFoundException;
 public class MainWindow {
     private JPanel mainPanel;
     private JLabel titleLabel;
@@ -12,7 +12,12 @@ public class MainWindow {
 
     public MainWindow () {
 
-        tracker = new GolfTracker();
+        try {
+            tracker = FileManager.loadRounds();
+        } catch (FileNotFoundException e) {
+            tracker = new GolfTracker();
+        }
+
         addRoundButton.addActionListener(e -> {
 
             JFrame frame = new JFrame("Add Round");
