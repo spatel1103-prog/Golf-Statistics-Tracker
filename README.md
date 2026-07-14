@@ -92,7 +92,3 @@ Adding or deleting a round automatically updates the stored data, allowing round
 - Add sorting and filtering options
 - Improve data storage using a database
 - Export golf statistics to CSV
-
-## About the Project
-
-I built this project to combine my interest in golf with my experience learning Java and object-oriented programming. The project began as a command-line application and was later expanded into a Java Swing desktop application with a graphical user interface and persistent data storage.
