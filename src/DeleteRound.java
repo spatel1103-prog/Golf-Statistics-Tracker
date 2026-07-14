@@ -1,5 +1,5 @@
 import javax.swing.*;
-
+import java.io.FileNotFoundException;
 public class DeleteRound {
 
     protected JPanel mainPanel;
@@ -30,6 +30,16 @@ public class DeleteRound {
                 }
 
                 tracker.deleteRound ( roundNumberInt );
+
+                try {
+                    FileManager.saveRounds(tracker);
+                } catch (FileNotFoundException ex) {
+                    JOptionPane.showMessageDialog(
+                            mainPanel,
+                            "Error saving rounds."
+                    );
+                    return;
+                }
 
                 JOptionPane.showMessageDialog(
                         mainPanel,
