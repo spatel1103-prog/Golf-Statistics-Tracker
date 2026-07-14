@@ -84,11 +84,3 @@ Adding or deleting a round automatically updates the stored data, allowing round
 3. Compile the Java source files.
 4. Run `MainWindow.java`.
 5. Use the graphical interface to add and manage golf rounds.
-
-## Future Improvements
-
-- Add performance trend visualizations and charts
-- Support editing existing rounds
-- Add sorting and filtering options
-- Improve data storage using a database
-- Export golf statistics to CSV
